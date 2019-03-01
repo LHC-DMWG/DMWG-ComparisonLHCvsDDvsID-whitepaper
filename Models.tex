@@ -1,0 +1,118 @@
+The recommendations in this proposal, adopt the model choices made for the early Run-2 LHC searches by the ATLAS/CMS DM Forum~\cite{Abercrombie:2015wmb}. 
+In this document we discuss
+models which
+assume that the DM particle is a Dirac fermion~$\chi$ and that the particle mediating the interaction (the ``mediator") is exchanged in the $s$-channel.\footnote{An orthogonal set of models describe $t$-channel exchange \cite{Chang:2013oia,An:2013xka,Bai:2013iqa,DiFranzo:2013vra}. This class of simplified DM models is left for future iterations and will thus not be discussed in the following.}
+After simplifying assumptions,
+each model is characterised by four parameters: the DM mass~$\mDM$, the mediator mass~$\mmed$, the universal mediator coupling to quarks~$\gq$  and the mediator coupling to DM~$\gDM$. Mediator couplings to leptons are always set to zero in order to avoid the stringent LHC bounds from 
+di-lepton searches.  
+In the limit of large $\mmed$, these (and all) models converge to a universal set of operators in an effective field theory (EFT)
+\cite{Beltran:2010ww,Goodman:2010yf,Bai:2010hh,Goodman:2010ku,Rajaraman:2011wf,Fox:2011pm}.
+In this section, we review the models and give the formulas for the total decay width of the mediators in each case. 
+
+\subsection{Vector and axial-vector models}
+
+The two models with a spin-1 mediator $Z'$, have the following interaction Lagrangians
+\begin{align}
+\label{eq:AV1} 
+\mathcal{L}_{\text{vector}}&=- \gDM Z'_{\mu} \bar{\chi}\gamma^{\mu}\chi -   \gq  \sum_{q=u,d,s,c,b,t} Z'_{\mu} \bar{q}\gamma^{\mu}q \,, \\
+\label{eq:AV2} 
+\mathcal{L}_{\text{axial-vector}}&=- \gDM Z'_{\mu} \bar{\chi}\gamma^{\mu}\gamma_5\chi - \gq \sum_{q=u,d,s,c,b,t} Z'_{\mu} \bar{q}\gamma^{\mu}\gamma_5q\,.
+\end{align}
+Note that the universality of the coupling $\gq$ guarantees that the above spin-1 simplified models are minimal flavour violating (MFV)~\cite{D'Ambrosio:2002ex}, which is crucial to avoid the severe existing constraints arising from quark flavour physics. 
+
+The minimal decay width of the mediator is given by the sum of the partial widths for all decays into DM and quarks that are kinematically accessible. For the vector mediator, the partial widths are given by
+\begin{align}
+\Gamma_{\text{vector}}^{\chi\bar{\chi}} & = \frac{\gDM^2 \hspace{0.25mm} \mmed}{12\pi} 
+ \left (1-4 \hspace{0.25mm}  z_{\rm{DM}} \right )^{1/2} \left(1 + 2 \hspace{0.25mm}  z_{\rm{DM}} \right) \, , \\
+\Gamma_{\text{vector}}^{q\bar{q}} & = \frac{\gq^2 \hspace{0.25mm}  \mmed}{4\pi} 
+ \left ( 1-4 \hspace{0.25mm}  z_q \right )^{1/2}   \left(1 + 2 \hspace{0.25mm}  z_q \right) \, ,
+\end{align}
+where $z_{{\rm{DM}},q} = m_{\mathrm{DM},q}^2/\mmed^2$ and the two different types of contribution to the width vanish for $\mmed < 2 \hspace{0.25mm}  m_{{\rm{DM}},q}$. The corresponding expressions for the axial-vector mediator are
+\begin{align}
+\Gamma_{\text{axial-vector}}^{\chi\bar{\chi}} & = \frac{\gDM^2 \, \mmed}{12\pi} 
+\left ( 1-4 \hspace{0.25mm} z_{\rm{DM}} \right ) ^{3/2} \,, \\ 
+  \Gamma_{\text{axial-vector}}^{q\bar{q}} & =  \frac{\gq^2 \, \mmed}{4\pi} 
+\left ( 1-4 \hspace{0.25mm} z_q \right ) ^{3/2} \, .
+\end{align}
+
+\subsection{Scalar and pseudo-scalar  models}
+\label{sub:smodels} 
+The two models with a spin-0 mediator $\phi$ are described by 
+\begin{align}
+\mathcal{L}_{\text{scalar}}&=- \gDM  \hspace{0.25mm}  \phi \bar{\chi}\chi-  \gq  \hspace{0.5mm}  \frac{\phi}{\sqrt{2}}\sum_{q=u,d,s,c,b,t}  y_q \hspace{0.25mm}  \bar{q}q \,, \label{eq:Scalar} \\
+\mathcal{L}_{\text{pseudo-scalar}}&=- i \gDM  \hspace{0.25mm}  \phi \bar{\chi}\gamma_5 \chi - i  \gq \hspace{0.5mm} \frac{\phi}{\sqrt{2}}\sum_{q=u,d,s,c,b,t} y_q \hspace{0.25mm}  \bar{q}\gamma_5 q \label{eq:PseudoScalar}\,,
+\end{align}
+where $y_q=\sqrt{2} m_q/v$ are the SM quark Yukawa couplings with $v\simeq246$~GeV the Higgs vacuum expectation value. These interactions are again compatible with the MFV hypothesis.
+
+In these models, there is a third contribution to the minimal width of the mediator, which arises from loop-induced decays into gluons. For the scalar mediator, the individual contributions are given by
+\begin{align}
+ \Gamma^{\chi\bar{\chi}}_{\text{scalar}} & = \frac{\gDM^2 \hspace{0.25mm} \mmed}{8\pi}\left(1 - 4  \hspace{0.25mm}  z_{\rm{DM}}^2\right)^{3/2}\,, \\
+ \Gamma^{q\bar{q}}_{\text{scalar}} & =  \frac{3 \hspace{0.25mm}  \gq^2 \hspace{0.25mm}  y_q^2 \, \mmed}{16\pi}\left(1 - 4 \hspace{0.25mm}  z_q^2\right)^{3/2}\, , \\
+ \Gamma^{gg}_{\text{scalar}} & = \frac{\alpha_s^2  \hspace{0.25mm}  \gq^2 \hspace{0.25mm}   \mmed^3}{32\pi^3 \hspace{0.25mm}  v^2} \, \big |f_{\rm scalar} (4 \hspace{0.25mm}  z_t)\big |^2 \,, 
+\end{align}
+while the corresponding expressions in the pseudo-scalar case read 
+\begin{align}
+ \Gamma^{\chi\bar{\chi}}_{\text{pseudo-scalar}} & =  \frac{\gDM^2 \hspace{0.25mm} \mmed}{8\pi}\left(1 - 4  \hspace{0.25mm}  z_{\rm{DM}}^2\right)^{1/2}\,, \\
+ \Gamma^{q\bar{q}}_{\text{pseudo-scalar}} & = \frac{3 \hspace{0.25mm}  \gq^2 \hspace{0.25mm}  y_q^2 \, \mmed}{16\pi}\left(1 - 4 \hspace{0.25mm}  z_q^2\right)^{1/2}  \,, \\
+ \Gamma^{gg}_{\text{pseudo-scalar}} & =\frac{\alpha_s^2  \hspace{0.25mm}  \gq^2 \hspace{0.25mm}   \mmed^3}{32\pi^3 \hspace{0.25mm}  v^2} \, \big |f_{\text{pseudo-scalar}} (4 \hspace{0.25mm}  z_t)\big |^2 \,.
+\end{align}
+Here the form factors take the form 
+\begin{align}
+ f_{\text{scalar}} (\tau) & = \tau\left[1+(1-\tau)  \hspace{0.25mm} \text{arctan}^2 \left(\frac{1}{\sqrt{\tau-1}}\right) \right] \,, \\
+ f_{\text{pseudo-scalar}} (\tau) & = \tau \hspace{0.5mm} \text{arctan}^2 \left(\frac{1}{\sqrt{\tau-1}}\right) \,. \label{eq:fPS}
+\end{align}
+Note that $ f_{\text{scalar}} (\tau)$ and $ f_{\text{pseudo-scalar}} (\tau)$ are still defined for $\tau < 1$, but in this case the form factors are complex. The tree-level corrections to the total widths of the mediator again do not contribute if $\mmed < 2 \hspace{0.25mm}  m_{{\rm{DM}}, q}$, meaning that the corresponding final state cannot be produced on-shell.  Decays to gluon pairs are only relevant for mediator masses between roughly $200 \, {\rm GeV}$ and $400 \,{\rm GeV}$ and if invisible decays are kinematically forbidden.
+	
+\begin{comment}
+
+
+Comparing or combining searches for dark matter (or any collider physics result) requires that we assume a model, whether we are comparing searches in one channel to searches in other channels, at other collision energies, or at other collider experiments. This document adopts the model choices made for early Run-2 LHC searches by the ATLAS/CMS Dark Matter Forum (REF), summarized below. These models assume that the DM particle is a Dirac fermion~$\chi$ and that the particle mediating the interaction (the `mediator') is exchanged in the $s$-channel. Each model is characterised by four parameters: the dark matter matter mass,~$\mDM$, the mediator mass,~$\mmed$, the mediator coupling to quarks,~$\gq$, and the mediator coupling to DM,~$\gDM$. In this section we define the models through the interaction Lagrangians and give the formulae for the mediator width. In the next section we provide recommendations for specific values of the parameters.
+
+\subsection{Vector and axial-vector $s$-channel models}
+
+The two models with a vector or axial-vector mediator, $Z'$, have the following interaction Lagrangians
+\begin{align}
+\label{eq:AV1} 
+\mathcal{L}_{\mathrm{vector}}&=- \gDM Z'_{\mu} \bar{\chi}\gamma^{\mu}\chi -\sum_{q=u,d,s,c,b,t} \gq Z'_{\mu} \bar{q}\gamma^{\mu}q \\
+\label{eq:AV1} 
+\mathcal{L}_{\rm{axial-vector}}&=- \gDM Z'_{\mu} \bar{\chi}\gamma^{\mu}\gamma^5\chi -\sum_{q=u,d,s,c,b,t} \gq Z'_{\mu} \bar{q}\gamma^{\mu}\gamma^5q\;.
+\end{align}
+\textbf{FK: To avoid any misunderstanding, should we maybe write $\gq$ in front of the sum, to make it clear that this is just one parameter for all quarks?}
+
+The minimal width of the mediator is given by the sum of the partial widths for the mediator decaying into quarks and (if kinematically allowed) DM, i.e.\ $\Gamma = \Gamma^{q\bar{q}} + \Gamma^{\chi\bar{\chi}}$. For the vector mediator, the partial widths are given by
+\begin{equation}
+\Gamma_{\mathrm{vector}}^{\chi\bar{\chi}} = \frac{\gDM^2 \, \mmed}{12\pi} 
+ \sqrt{1-4 \, z_{\rm{DM}}} \, \left(1 + 2 \, z_{\rm{DM}} \right) \; , \quad
+\Gamma_{\mathrm{vector}}^{q\bar{q}} = \sum_q \frac{\gq^2 \, \mmed}{4\pi} 
+ \sqrt{1-4 \, z_q} \, \left(1 + 2 \, z_q \right) \; ,
+\end{equation}
+where $z_{{\rm{DM}},q} = m_{\mathrm{DM},q}^2/\mmed^2$ and the contribution to the width vanishes for $4 \, z_{{\rm{DM}},q} > 1$. The corresponding expressions for the axial-vector mediator are
+\begin{equation}
+\Gamma_{\mathrm{axial-vector}}^{\chi\bar{\chi}} = \frac{\gDM^2 \, \mmed}{12\pi} 
+ \sqrt{1-4 \, z_{\rm{DM}}}^{3/2} \; , \quad \Gamma_{\mathrm{axial-vector}}^{q\bar{q}} = \sum_q \frac{\gq^2 \, \mmed}{4\pi} 
+ \sqrt{1-4 \, z_q}^{3/2} \; .
+\end{equation}
+
+\subsection{Scalar and pseudo-scalar $s$-channel models}
+
+The two models with a scalar, $\phi$ or pseudo-scalar mediator, $a$, have the following interaction Lagrangians
+\begin{align}
+\mathcal{L}_{\mathrm{scalar}}&=- \gDM \phi \bar{\chi}\chi-\frac{\phi}{\sqrt{2}}\sum_{q=u,d,s,c,b,t} \gq y_q \bar{q}q \\
+\mathcal{L}_{\mathrm{pseudo-scalar}}&=i \gDM a \bar{\chi}\gamma^5 \chi+i \frac{a}{\sqrt{2}}\sum_{q=u,d,s,c,b,t} \gq y_q \, \bar{q}\gamma^5 q\;,
+\end{align}
+where $y_q=\sqrt{2} m_q/v$ is the quark Yukawa coupling and $v\simeq246$~GeV is the Higgs vacuum expectation value. This interaction structure is compatible with the Minimal Flavour Violation (MFV) hypothesis.
+
+In these models, there is a third contribution to the minimal width of the mediator, which arises from loop-induced decays of the mediator into gluons, so that $\Gamma = \Gamma^{q\bar{q}} + \Gamma^{\chi\bar{\chi}} + \Gamma^{gg}$. For the scalar mediator, the individual contributions are given by
+\begin{align}
+ \Gamma^{\chi\bar{\chi}}_{\mathrm{scalar}} & = \frac{\gDM^2 \, \mmed}{8\pi}\left(1 - 4 \, z_{\rm{DM}}^2\right)^{3/2}\;,\quad
+ \Gamma^{q\bar{q}}_{\mathrm{scalar}} = \sum_q \frac{3 \, y_q^2 \, \gq^2 \, \mmed}{16\pi}\left(1 - 4 \, z_q^2\right)^{3/2}\; , \nonumber \\
+ \Gamma^{gg}_{\mathrm{scalar}} & = \frac{\alpha_s^2 \, y_t^2 \, \gq^2 \, \mmed^3}{32\pi^3 \, v^2} \left|f_\phi(4 \, z_t)\right|^2 \quad \text{with} \quad f_\phi(\tau) = \tau\left[1+(1-\tau) \, \text{arctan}^2 \left(\frac{1}{\sqrt{\tau-1}}\right) \right]
+\end{align}
+where $z_{{\rm{DM}},q} = m_{\mathrm{DM},q}^2/\mmed^2$ and the tree-level contributions to the width vanish for $4 \, z_{{\rm{DM}},q} > 1$. The corresponding expressions for the pseudo-scalar are
+\begin{align}
+ \Gamma^{\chi\bar{\chi}}_{\mathrm{pseudo-scalar}} & = \frac{\gDM^2 \, \mmed}{8\pi}\left(1 - 4 \, z_{\rm{DM}}^2\right)^{1/2}\;,\quad
+ \Gamma^{q\bar{q}}_{\mathrm{pseudo-scalar}} = \sum_q \frac{3 \, y_q^2 \, \gq^2 \, \mmed}{16\pi}\left(1 - 4 \, z_q^2\right)^{1/2}\; ,\nonumber  \\
+ \Gamma^{gg}_{\mathrm{pseudo-scalar}} & = \frac{\alpha_s^2 \, y_t^2 \, \gq^2 \, \mmed^3}{32\pi^3 \, v^2} \left|f_a(4 \, z_t)\right|^2 \quad \text{with} \quad f_a(\tau) = \tau \, \text{arctan}^2 \left(\frac{1}{\sqrt{\tau-1}}\right) \; .
+\end{align}
+
+\end{comment}
