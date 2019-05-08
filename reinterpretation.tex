@@ -1,0 +1,266 @@
+\documentclass[a4paper, 11pt,notoc]{article}
+\pdfoutput=1
+
+    \makeatletter
+\def\@fnsymbol#1{\ensuremath{\ifcase#1\or \dagger\or \ddagger\or
+   \mathsection\or \mathparagraph\or \|\or **\or \dagger\dagger
+   \or \ddagger\ddagger \else\@ctrerr\fi}}
+    \makeatother
+
+
+\usepackage{jcappub}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{verbatim}
+\usepackage{caption}
+%\usepackage[skip=0cm,list=true,labelfont=it]{subcaption}
+\usepackage{subcaption}
+\usepackage{lineno}
+\usepackage{soul}
+\linenumbers 
+
+%\usepackage{draftwatermark}
+%\SetWatermarkText{DRAFT V2}
+%\SetWatermarkLightness{0.9}
+%\SetWatermarkScale{3.0}
+
+\newcommand{\bra}[1]{\langle #1|}
+\newcommand{\ket}[1]{|#1\rangle}
+
+\newcommand{\sigv}{\langle \sigma v_{\rm{rel}} \rangle}
+\newcommand{\MET}{\slashed{E}_T}
+\newcommand{\mDM}{m_{\rm{DM}}}
+\newcommand{\mmed}{M_{\rm{med}}}
+\newcommand{\mMed}{M_{\rm{med}}}
+\newcommand{\gDM}{g_{\rm{DM}}}
+\newcommand{\gq}{g_q}
+\newcommand{\gSM}{g_q}
+\newcommand{\ifb}{\rm{fb}^{-1}}
+
+\newcommand{\mA}{M_{A}}
+\newcommand{\GamA}{\Gamma_{A}}
+%\newcommand{\gSM}{g_{\rm{SM}}}
+
+\newcommand{\Uli}{\color{red}}
+\definecolor{cerulean}{RGB}{44,150,207}
+\newcommand{\ATLASComments}{\color{cerulean}}
+
+\usepackage{bigfoot}
+
+\DeclareNewFootnote{A}
+\renewcommand{\thefootnoteA}{\fnsymbol{footnoteA}}
+%\MakePerPage{footnoteA}
+\DeclareNewFootnote{B} % If we omitted this declaration (and used \footnote instead), that'd place the standard footnotes _above_ the \footnoteA ones.
+
+
+% KH for new affiliations
+\newcommand{\footremember}[2]{%
+    \footnote{#1}
+    \newcounter{#1}
+    \setcounter{#1}{\value{footnote}}%
+}
+
+
+%DIF PREAMBLE EXTENSION ADDED BY LATEXDIFF
+%DIF UNDERLINE PREAMBLE %DIF PREAMBLE
+\RequirePackage[normalem]{ulem} %DIF PREAMBLE
+\RequirePackage{color}\definecolor{RED}{rgb}{1,0,0}\definecolor{BLUE}{rgb}{0,0,1} %DIF PREAMBLE
+\providecommand{\DIFadd}[1]{{\protect\color{blue}\uwave{#1}}} %DIF PREAMBLE
+\providecommand{\DIFdel}[1]{{\protect\color{red}\sout{#1}}}                      %DIF PREAMBLE
+%DIF SAFE PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFaddbegin}{} %DIF PREAMBLE
+\providecommand{\DIFaddend}{} %DIF PREAMBLE
+\providecommand{\DIFdelbegin}{} %DIF PREAMBLE
+\providecommand{\DIFdelend}{} %DIF PREAMBLE
+%DIF FLOATSAFE PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFaddFL}[1]{\DIFadd{#1}} %DIF PREAMBLE
+\providecommand{\DIFdelFL}[1]{\DIFdel{#1}} %DIF PREAMBLE
+\providecommand{\DIFaddbeginFL}{} %DIF PREAMBLE
+\providecommand{\DIFaddendFL}{} %DIF PREAMBLE
+\providecommand{\DIFdelbeginFL}{} %DIF PREAMBLE
+\providecommand{\DIFdelendFL}{} %DIF PREAMBLE
+%DIF END PREAMBLE EXTENSION ADDED BY LATEXDIFF
+
+
+\begin{document}
+\title{\begin{boldmath} \huge Recommendations on presenting LHC searches for missing transverse energy \\ signals using simplified $s$-channel models \\ of dark matter \vspace{7mm} \end{boldmath}}
+
+% \begin{comment}
+% %%% OLD %%%
+% \title{Comparing collider Dark Matter searches with Direct and Indirect Detection Experiments using simplified models 
+% }
+% \end{comment}
+
+%\author[a]{LHC DM WG}
+%\affiliation[a]{ LHC DM WG}
+%\emailAdd{oliver.buchmueller@cern.ch}
+
+
+%%%%%%
+
+\author[1(now~28),*]{Antonio~Boveia}
+\affiliation[1]{CERN, EP Department, CH-1211 Geneva 23, Switzerland}
+\emailAdd{antonio.boveia@cern.ch}
+
+\author[2,*]{Oliver~Buchmueller,}
+\affiliation[2]{High Energy Physics Group, Blackett Laboratory, Imperial College, Prince Consort Road, London, SW7 2AZ, United Kingdom}
+\emailAdd{oliver.buchmueller@cern.ch}
+
+\author[3(now~32)]{Giorgio Busoni,} 
+\affiliation[3]{ARC Centre of Excellence for Particle Physics at the Terascale, School of Physics, University of Melbourne, 3010, Australia}
+%\affiliation[3]{SISSA and INFN, Sezione di Trieste, Italy}
+
+\author[4(now~30,31)]{Francesco~D'Eramo,} 
+\affiliation[4]{UC, Santa Cruz and UC, Santa Cruz, Inst. Part. Phys., USA}
+
+\author[1,5]{Albert~De~Roeck,}
+\affiliation[5]{Antwerp University, B2610 Wilrijk, Belgium}
+
+\author[6]{Andrea~De~Simone,}
+\affiliation[6]{SISSA and INFN Sezione di Trieste, via Bonomea 265, I-34136 Trieste, Italy}
+
+\author[7,*]{Caterina~Doglioni,}
+\affiliation[7]{Fysiska institutionen, Lunds universitet, Lund, Sweden}
+\emailAdd{caterina.doglioni@cern.ch}
+
+\author[3]{Matthew~J.~Dolan,}
+%\affiliation[8]{ARC Centre of Excellence for Particle Physics at the Terascale, School of Physics, University of Melbourne, 3010, Australia}
+
+\author[8]{Marie-Helene~Genest,} 
+\affiliation[8]{LPSC, Universite Grenoble-Alpes, CNRS/IN2P3, France}
+
+\author[9,*]{Kristian~Hahn,}
+\affiliation[9]{Department of Physics and Astronomy, Northwestern University, Evanston, Illinois 60208, USA}
+\emailAdd{kristian.hahn@cern.ch}
+
+\author[10,11,*]{Ulrich~Haisch,}
+\affiliation[10]{Rudolf Peierls Centre for Theoretical Physics, University of Oxford, Oxford, OX1 3PN, United Kingdom}
+\affiliation[11]{CERN, TH Department, CH-1211 Geneva 23, Switzerland}
+\emailAdd{ulrich.haisch@physics.ox.ac.uk}
+
+\author[1(now~34)]{Philip~C.~Harris,} 
+%\affiliation[1]{CERN, EP Department, CH-1211 Geneva 23, Switzerland}
+
+\author[12]{Jan~Heisig,}
+\affiliation[12]{Institute for Theoretical Particle Physics and Cosmology, RWTH Aachen University, Germany}
+
+\author[13(now~29)]{Valerio~Ippolito,} 
+\affiliation[13]{Laboratory for Particle Physics and Cosmology, Harvard University, USA}
+
+\author[14(now~12)]{Felix~Kahlhoefer,}
+\affiliation[14]{DESY, Notkestra\ss e 85, D-22607 Hamburg, Germany}
+\emailAdd{felix.kahlhoefer@desy.de}
+
+\author[15]{Valentin~V.~Khoze,} 
+\affiliation[15]{Institute of Particle Physics Phenomenology, Durham University, United Kingdom}
+
+\author[16]{Suchita~Kulkarni,} 
+\affiliation[16]{Institut f\"ur Hochenergiephysik, \"Osterreichische Akademie der Wissenschaften, Austria}
+
+\author[17]{Greg~Landsberg,} 
+\affiliation[17]{Physics Department, Brown University, Providence, Rhode Island 02912, USA}
+
+\author[18]{Steven~Lowette,} 
+\affiliation[18]{Vrije Universiteit Brussel IIHE, Belgium}
+
+\author[2]{Sarah~Malik,} 
+%\affiliation[nFxf]{Imperial College London, United Kingdom}
+
+\author[11,*]{Michelangelo~Mangano,}
+%\affiliation[11]{CERN, EP Department, CH-1211 Geneva 23, Switzerland}
+\emailAdd{michelangelo.mangano@cern.ch}
+
+\author[19(now~33)]{Christopher~McCabe,}
+\affiliation[19]{GRAPPA Centre of Excellence, University of Amsterdam, Science Park 904, 1098 XH Amsterdam, Netherlands}
+\emailAdd{christopher.mccabe@kcl.ac.uk}
+
+%\author[8]{Matthew McCullough,} 
+% removed by Uli
+
+\author[20]{Stephen~Mrenna,} 
+\affiliation[20]{FNAL, USA}
+
+\author[21(now~14)]{Priscilla~Pani,} 
+\affiliation[21]{Stockholm University, Sweden}
+
+\author[1(now~22)]{Tristan~du~Pree,} 
+%\affiliation[a]{CERN, EP Department, CH-1211 Geneva 23, Switzerland}
+
+\author[11]{Antonio~Riotto,} 
+%\affiliation[20]{Department of Theoretical Physics, University of Geneva, Switzerland}
+
+\author[19,22]{David~Salek,} 
+\affiliation[22]{Nikhef, Science Park 105, 1098 XG Amsterdam, Netherlands}
+
+\author[14]{Kai~Schmidt-Hoberg,}
+
+\author[23]{William~Shepherd,}
+\affiliation[23]{Niels Bohr International Academy, Niels Bohr Institute, University of Copenhagen, Blegdamsvej 17, DK-2100 Copenhagen, Denmark}
+
+\author[24,*]{Tim~M.P.~Tait,}
+\affiliation[24]{Department of Physics and Astronomy, University of California, Irvine, California 92697, USA}
+\emailAdd{ttait@uci.edu}
+
+\author[25]{Lian-Tao~Wang,} 
+\affiliation[25]{Enrico Fermi Institute and Department of Physics and Kavli Institute for Cosmological Physics, University of Chicago, USA}
+
+\author[26]{Steven Worm} 
+\affiliation[26]{Particle Physics Department, Rutherford Appleton Laboratory, United Kingdom}
+
+\author[27]{and~Kathryn~Zurek} 
+\affiliation[27]{University of California and LBNL, Berkeley, USA}
+
+\affiliation[28]{Department of Physics / Center for Cosmology and AstroParticle Physics, The Ohio State University, 191 W Woodruff Ave, Columbus, OH 43210-1117}
+\affiliation[29]{INFN Sezione di Roma}
+\affiliation[30]{Dipartimento di Fisica ed Astronomia, Universit‡ di Padova, Via Marzolo 8, 35131 Padova, Italy }
+\affiliation[31]{INFN, Sezione di Padova, Via Marzolo 8, 35131 Padova, Italy}
+\affiliation[32]{Max-Planck-Institut f{\"u}r Kernphysik, Saupfercheckweg 1, 69117 Heidelberg, Germany}
+\affiliation[33]{Department of Physics, King's College London, Strand, London, WC2R 2LS, United Kingdom}
+\affiliation[34]{Department of Physics, Massachusetts Institute of Technology, 77 Massachusetts Avenue, Cambridge, MA 02139}
+%
+
+
+
+
+\hfill CERN-LPCC-2016-001
+
+\abstract{
+This document summarises the proposal of the LHC Dark Matter Working Group on how to present LHC results on $s$-channel simplified dark matter models and to compare them to direct and indirect detection experiments.
+}
+
+
+\maketitle
+%\flushbottom
+
+%%%%%%%%%%%%%%%%
+\section{Introduction}
+\input{Introduction.tex}
+%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%
+\section{Models considered}
+\label{sec:models}
+\input{Models.tex}
+%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%
+\section{Presentation of LHC results}
+\label{sec:colliderresults}
+\input{ColliderResults.tex}
+%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%
+\section{Comparison to non-collider results}
+\label{sec:comparisontonon-colliderresults}
+\input{NonColliderResults.tex}
+%%%%%%%%%%%%%%%%
+
+\section{Acknowledgement} 
+This document is part of a project that has received funding from the European Research Council (ERC) under the European Union’s Horizon 2020 research and innovation programme (grant agreement No 679305). The work of A.~Boveia is supported by the U.S. Department of Energy grant number DE-SC0011726.  The work of O.~Buchmueller is supported in part by the London Centre for Terauniverse Studies (LCTS), using funding from the European Research Council via the Advanced Investigator Grant 267352. The work of F.~D'Eramo was supported by the U.S. Department of Energy grant number DE-SC0010107.  K.~Hahn acknowledges support from the U.S. Department of Energy grant number DE-SC0015973.  U.~Haisch acknowledges the hospitality and support of the CERN theory division.  F.~Kahlhoefer acknowledges funding from the Deutsche Forschungsgemeinschaft (DFG) through the Emmy Noether Grant No. KA 4662/1-1.  S.~Kulkarni is supported by the New Frontiers program of the Austrian Academy of Sciences. C.~McCabe is supported by the Science and Technology Facilities Council (STFC) Grant ST/N004663/1, and the Foundation for Fundamental Research on Matter (FOM), which is part of the Netherlands Organisation for Scientific Research (NWO). T.M.P.~Tait acknowledges support from NSF grant PHY-1316792 and UCI through a Chancellor's Fellowship. K.~Schmidt-Hoberg received funding from the European Union's Horizon 2020 research and innovation programme under grant agreement no. 638528.
+
+
+\bibliography{ref}
+\bibliographystyle{JHEP}
+
+\end{document}
+
