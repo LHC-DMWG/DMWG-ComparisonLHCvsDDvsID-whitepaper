@@ -1,14 +1,23 @@
-\documentclass[a4paper, 11pt,notoc]{article}
-\pdfoutput=1
+\documentclass[review]{elsarticle}
+
+\usepackage{lineno,hyperref}
+%\usepackage{authblk}
+%\modulolinenumbers[5]
+
+\journal{Physics of the Dark Universe}
+
+\usepackage[utf8x]{inputenc}
 
 
-\usepackage{jcappub}
 \usepackage{graphicx}
 \usepackage{booktabs}
 \usepackage{verbatim}
 \usepackage{caption}
 %\usepackage[skip=0cm,list=true,labelfont=it]{subcaption}
 \usepackage{subcaption}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
 
 %https://tex.stackexchange.com/questions/131870/hyperref-package-prevents-shifting-from-ot1-to-t1-encoding
 \renewcommand{\dh}{\fontencoding{T1}\selectfont{\symbol{240}}}
@@ -35,29 +44,7 @@
 \newcommand{\GamA}{\Gamma_{A}}
 %\newcommand{\gSM}{g_{\rm{SM}}}
 
-\newcommand{\Uli}{\color{red}}
-\definecolor{cerulean}{RGB}{44,150,207}
-\newcommand{\ATLASComments}{\color{cerulean}}
-
-%DIF PREAMBLE EXTENSION ADDED BY LATEXDIFF
-%DIF UNDERLINE PREAMBLE %DIF PREAMBLE
 \RequirePackage[normalem]{ulem} %DIF PREAMBLE
-\RequirePackage{color}\definecolor{RED}{rgb}{1,0,0}\definecolor{BLUE}{rgb}{0,0,1} %DIF PREAMBLE
-\providecommand{\DIFadd}[1]{{\protect\color{blue}\uwave{#1}}} %DIF PREAMBLE
-\providecommand{\DIFdel}[1]{{\protect\color{red}\sout{#1}}}                      %DIF PREAMBLE
-%DIF SAFE PREAMBLE %DIF PREAMBLE
-\providecommand{\DIFaddbegin}{} %DIF PREAMBLE
-\providecommand{\DIFaddend}{} %DIF PREAMBLE
-\providecommand{\DIFdelbegin}{} %DIF PREAMBLE
-\providecommand{\DIFdelend}{} %DIF PREAMBLE
-%DIF FLOATSAFE PREAMBLE %DIF PREAMBLE
-\providecommand{\DIFaddFL}[1]{\DIFadd{#1}} %DIF PREAMBLE
-\providecommand{\DIFdelFL}[1]{\DIFdel{#1}} %DIF PREAMBLE
-\providecommand{\DIFaddbeginFL}{} %DIF PREAMBLE
-\providecommand{\DIFaddendFL}{} %DIF PREAMBLE
-\providecommand{\DIFdelbeginFL}{} %DIF PREAMBLE
-\providecommand{\DIFdelendFL}{} %DIF PREAMBLE
-%DIF END PREAMBLE EXTENSION ADDED BY LATEXDIFF
 
 
 \begin{document}
@@ -76,13 +63,13 @@
 
 %%%%%%
 
-\author[1]{Antonio~Boveia (editor, DM WG organizer),}
+\author[1]{Antonio~Boveia (editor, DM WG organizer)\footnote{now at Ohio State University, 191 W. Woodruff Avenue Columbus, OH 43210},}
 \address[1]{CERN, EP Department, CH-1211 Geneva 23, Switzerland}
-\emailAdd{antonio.boveia@cern.ch}
+%\emailAdd{antonio.boveia@cern.ch}
 
 \author[2]{Oliver~Buchmueller (editor, DM WG organizer),}
 \address[2]{High Energy Physics Group, Blackett Laboratory, Imperial College, Prince Consort Road, London, SW7 2AZ, United Kingdom}
-\emailAdd{oliver.buchmueller@cern.ch}
+%\emailAdd{oliver.buchmueller@cern.ch}
 
 \author[3]{Giorgio Busoni,} 
 \address[3]{ARC Centre of Excellence for Particle Physics at the Terascale, School of Physics, University of Melbourne, 3010, Australia}
@@ -99,7 +86,7 @@
 
 \author[7]{Caterina~Doglioni (editor, DM WG organizer),}
 \address[7]{Fysiska institutionen, Lunds universitet, Lund, Sweden}
-\emailAdd{caterina.doglioni@cern.ch}
+%\emailAdd{caterina.doglioni@cern.ch}
 
 \author[3]{Matthew~J.~Dolan,}
 %\address[8]{ARC Centre of Excellence for Particle Physics at the Terascale, School of Physics, University of Melbourne, 3010, Australia}
@@ -109,12 +96,12 @@
 
 \author[9]{Kristian~Hahn (editor, DM WG organizer),}
 \address[9]{Department of Physics and Astronomy, Northwestern University, Evanston, Illinois 60208, USA}
-\emailAdd{kristian.hahn@cern.ch}
+%\emailAdd{kristian.hahn@cern.ch}
 
 \author[10,11]{Ulrich~Haisch (editor, DM WG organizer),}
 \address[10]{Rudolf Peierls Centre for Theoretical Physics, University of Oxford, Oxford, OX1 3PN, United Kingdom}
 \address[11]{CERN, TH Department, CH-1211 Geneva 23, Switzerland}
-\emailAdd{ulrich.haisch@physics.ox.ac.uk}
+%\emailAdd{ulrich.haisch@physics.ox.ac.uk}
 
 \author[1]{Philip~C.~Harris,} 
 %\address[1]{CERN, EP Department, CH-1211 Geneva 23, Switzerland}
@@ -128,7 +115,7 @@
 
 \author[14]{Felix~Kahlhoefer (editor),}
 \address[14]{DESY, Notkestra\ss e 85, D-22607 Hamburg, Germany}
-\emailAdd{felix.kahlhoefer@desy.de}
+%\emailAdd{felix.kahlhoefer@desy.de}
 
 
 \author[15]{Valentin~V.~Khoze,} 
@@ -148,11 +135,11 @@
 
 \author[11]{Michelangelo~Mangano,}
 %\address[11]{CERN, EP Department, CH-1211 Geneva 23, Switzerland}
-\emailAdd{michelangelo.mangano@cern.ch}
+%\emailAdd{michelangelo.mangano@cern.ch}
 
 \author[19]{Christopher~McCabe (editor),}
 \address[19]{GRAPPA Centre of Excellence, University of Amsterdam, Science Park 904, 1098 XH Amsterdam, Netherlands}
-\emailAdd{c.mccabe@uva.nl}
+%\emailAdd{c.mccabe@uva.nl}
 
 %\author[8]{Matthew McCullough,} 
 % removed by Uli
@@ -180,7 +167,7 @@
 
 \author[24]{Tim~M.P.~Tait (editor, DM WG organizer),}
 \address[24]{Department of Physics and Astronomy, University of California, Irvine, California 92697, USA}
-\emailAdd{ttait@uci.edu}
+%\emailAdd{ttait@uci.edu}
 
 \author[25]{Lian-Tao~Wang,} 
 \address[25]{Enrico Fermi Institute and Department of Physics and Kavli Institute for Cosmological Physics, University of Chicago, USA}
@@ -196,14 +183,14 @@
 
 
 
-\hfill CERN-LPCC-2016-001
+%\hfill CERN-LPCC-2016-001
 
 
 
 
 \abstract{
 This document summarises the proposal of the LHC Dark Matter Working Group on how to present LHC results on $s$-channel simplified dark matter models and to compare them to direct (indirect) detection experiments.
-}
+}}
 
 %%% OLD %%%
 % \begin{comment}
